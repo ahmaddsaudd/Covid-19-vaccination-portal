@@ -1,0 +1,219 @@
+:root{
+    --bg: #00656a;
+    --blue: #3c6382;
+    --dark-blue: #0a3d62;
+    --carrot: #e67e22;
+    --carrot-hover: #f0932b;
+    --red-dots: #c23616;
+    --one: #f7d8948a;
+    --two: #f3a6838a;
+    --three: #f8a5c28a;
+    --four: #63cdda8a;
+    --five: #55efc48a;
+    --new-cases: #f7d894;
+    --new-recovered: #f3a683;
+    --new-deaths: #f8a5c2;
+    --critical: #63cdda;
+    --orange-heading: #ff3300;
+    --icon-bg: #eee;
+    --credit-a: #95a5a6;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: 0.3s cubic-bezier(0.38, 1.15, 0.7, 1.12);
+}
+label{
+    text-transform: none;
+}
+*::selection{
+    background: var(--dark-blue);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem 9%;
+    padding-top: 8rem;
+}
+
+/* whatis */
+.whatis .heading{
+    margin-top: 4rem;
+}
+.whatis .box-container{
+    display: flex;
+    justify-content: center;
+}
+.whatis .box-container .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatis .box-container .box p{
+    font-size: 1.7rem;
+    color: var(--dark-blue);
+}
+
+/* faq */
+.faq{
+    background-color: var(--bg);
+}
+.faq .heading{
+    color: #fff;
+}
+.faq .container{
+    background-image: url(../img/background-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 3rem;
+    border-radius: 2rem;
+    margin-top: 4rem;
+}
+.faq .container .nav{
+    background-color: #dfe6e9;
+    border-radius: 1.5rem;
+}
+.faq .container .nav .nav-item button{
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    padding: 1rem 0;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: var(--blue);
+}
+.nav-link{
+    color: var(--dark-blue);
+}
+.nav-link.active{
+    transform: scale(1.05);
+    transition: all 500ms ease;
+}
+.nav-link:hover{
+    color: var(--blue);
+}
+
+.container .tab-content{
+    margin-top: 2rem;
+}
+.accordion-button{
+    font-size: 1.6rem;
+    padding: 2rem 1rem;
+    color: var(--dark-blue);
+}
+.container .accordion-body{
+    font-size: 1.4rem;
+    padding: 2rem 1rem;
+    color: var(--blue);
+}
+
+a.scroll-top{
+    position: fixed;
+    bottom: 7.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: none;
+    color: #fff;
+}
+.scroll-top .fa-arrow-up{
+    width: 8rem;
+    animation: float 3s linear infinite;
+    font-size: 6rem;
+}
+@keyframes float{
+    100%, 0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3rem);
+    }
+}
+
+
+
+/* media queries */
+@media (max-width: 1055px){
+    #menu{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 2rem;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header .navbar.nav-toggle{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header .navbar a{
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        color: var(--dark-blue);
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+    .scroll-top .fa-arrow-up{
+        width: 6.5rem;
+        font-size: 6rem;
+    }
+    .carousel-inner img{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 930px){
+    .whatis .box-container .box p{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+    .scroll-top .fa-arrow-up{
+        width: 4rem;
+        font-size: 5rem;
+    }
+    .whatis .box-container .box p{
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .whatis .box-container .box img{
+        width: 50rem;
+    }
+    .container .tab-content{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 450px){
+    .scroll-top .fa-arrow-up{
+        width: 3rem;
+        font-size: 3.5rem;
+    }
+    .whatis .box-container .box p{
+        font-size: 1.6rem;
+    }
+}
